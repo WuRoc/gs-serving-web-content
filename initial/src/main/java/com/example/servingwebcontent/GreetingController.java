@@ -19,19 +19,25 @@ public class GreetingController {
 
     /**
      *
-     * @param name
+     * @param nam
      * @param model
      * @return
      */
     @GetMapping("/greeting") //HTTP GET请求
-    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
+    //@RequestParam(name = "ne", required = false, defaultValue = "World") 这里面只与请求参数有关
+    public String greeting(@RequestParam(name = "ne", required = false, defaultValue = "World") String nam, Model model) {
         //https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/ui/Model.html#addAllAttributes-java.util.Collection-
-        model.addAttribute("name", name);
-        String attribute = (String) model.getAttribute("name");
+        model.addAttribute("nam", nam);
+
+        String attribute = (String) model.getAttribute("nam");
+
         System.out.println(attribute);
-        if (model.containsAttribute("name")){
+
+        if (model.containsAttribute("nam")){
+
             System.out.println(1);
         }
+
         return "greeting";
     }
 }
