@@ -1,6 +1,7 @@
 package com.example.servingwebcontent;
 
 import org.slf4j.Logger;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @Create 2021-11-16 20:35
  * @Blog https://www.cnblogs.com/WLCYSYS/
  **/
-
+@Controller
 public class GreetingController {
 
     /**
